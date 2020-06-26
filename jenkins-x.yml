@@ -4,8 +4,8 @@ pipelineConfig:
   release:
    build:
     steps:
-    - sh: echo "setup"
-      name: setup
+    - sh: pip install --upgrade pip
+      name: upgrade
     - sh: pip install -r requirements.txt
       name: install
     - sh: pylint --disable=R,C,W1203 app.py
