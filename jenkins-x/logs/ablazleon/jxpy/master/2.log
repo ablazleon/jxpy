@@ -1,0 +1,117 @@
+
+Showing logs for build [32mablazleon-jxpy-master-release-zw2ct-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-7tfw6[0m
+{"level":"info","ts":1593175138.991939,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1593175138.9923549,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mablazleon-jxpy-master-release-zw2ct-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-qd8lh[0m
+{"level":"info","ts":1593175140.5562644,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1593175140.5636644,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mablazleon-jxpy-master-release-zw2ct-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mablazleon-jxpy-master-release-zw2ct-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-ablazleon-jxpy-master-release-zw2ct-gfx6x[0m
+{"level":"info","ts":1593175150.0031345,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1593175151.3238907,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/**py.git @ v0.0.2 in path /workspace/source"}
+
+Showing logs for build [32mablazleon-jxpy-master-release-zw2ct-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mablazleon-jxpy-master-release-zw2ct-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:6fa97baa7d3eadc9892ee61f4084edb285dd97f4
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mablazleon-jxpy-master-release-zw2ct-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mablazleon-jxpy-master-release-zw2ct-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mablazleon-jxpy-master-release-zw2ct-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0626 12:39:14.045852       9 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest python:onbuild     
+E0626 12:39:14.491908       9 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0626 12:39:14.495228       9 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0002] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0004] Built cross stage deps: map[]                
+[36mINFO[0m[0004] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0005] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0006] Executing 3 build triggers                   
+[36mINFO[0m[0006] Checking for cached layer gcr.io/envjenkinsk8udacitycapstone/cache:dc2a839bd6d525fd9783a6852939774c55dc14024a49397cd18ef840aae363e1... 
+[36mINFO[0m[0007] Using caching version of cmd: COPY requirements.txt /usr/src/app/ 
+[36mINFO[0m[0007] Checking for cached layer gcr.io/envjenkinsk8udacitycapstone/cache:8bf2abf0a84228eb1cc03999f3ee3ce7361230c16e28eae7af74285f6291b7d4... 
+[36mINFO[0m[0008] Using caching version of cmd: RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0008] Checking for cached layer gcr.io/envjenkinsk8udacitycapstone/cache:24068eca3062e7aa7f3a76b423bc54e48be018bbee284f5ad5d1dda314f1de42... 
+[36mINFO[0m[0009] No cached layer found for cmd COPY . /usr/src/app 
+[36mINFO[0m[0009] cmd: EXPOSE                                  
+[36mINFO[0m[0009] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0009] Unpacking rootfs as cmd COPY . /usr/src/app requires it. 
+[36mINFO[0m[0029] COPY requirements.txt /usr/src/app/          
+[36mINFO[0m[0029] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0029] RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0029] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0029] COPY . /usr/src/app                          
+[36mINFO[0m[0029] Resolving 115 paths                          
+[36mINFO[0m[0029] Taking snapshot of files...                  
+[36mINFO[0m[0029] Pushing layer gcr.io/envjenkinsk8udacitycapstone/cache:24068eca3062e7aa7f3a76b423bc54e48be018bbee284f5ad5d1dda314f1de42 to cache now 
+[36mINFO[0m[0029] COPY requirements.txt .                      
+[36mINFO[0m[0029] Resolving 1 paths                            
+[36mINFO[0m[0029] Taking snapshot of files...                  
+[36mINFO[0m[0029] ENV PORT 8080                                
+[36mINFO[0m[0029] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0029] EXPOSE 8080                                  
+[36mINFO[0m[0029] cmd: EXPOSE                                  
+[36mINFO[0m[0029] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0029] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0029] ENTRYPOINT ["python"]                        
+[36mINFO[0m[0029] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0029] CMD ["app.py"]                               
+[36mINFO[0m[0029] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0029] Pushing layer gcr.io/envjenkinsk8udacitycapstone/cache:247ec970e787eac26035ccbe013ffbd10e85fed4c1d358c8a8944d7d55eb46d6 to cache now 
+
+Showing logs for build [32mablazleon-jxpy-master-release-zw2ct-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mablazleon-jxpy-master-release-zw2ct-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/**py to an unshallow repository
+Generating change log from git ref 47d1ba6226cf3baa618d3b75532726601d81cc51 => ec3a5a6e4d6535ca8f2056ec6005324950c9fb0d
+Associating user ********* in users.jenkins.io with email adrian.blazquez.leon@alumnos.upm.es to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user ********* in users.jenkins.io
+WARNING: Failed to enrich commit c8ebed98d4e72dbf6693a66a3fb39cf7c100b29d with issues: User.jenkins.io "*********" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+WARNING: Failed to enrich commit c8ebed98d4e72dbf6693a66a3fb39cf7c100b29d with issues: users.jenkins.io "x-0" already exists
+Finding issues in commit messages using git format
+WARNING: No release found for *********/**py and tag v0.0.2 so creating a new release
+Updated the release information at https://github.com/*********/**py/releases/tag/v0.0.2
+generated: /workspace/source/charts/**py/templates/release.yaml
+Created Release **py-0-0-2 resource in namespace **
+Updating PipelineActivity *********-**py-master-2 with version 0.0.2
+Updated PipelineActivities *********-**py-master-2 with release notes URL: https://github.com/*********/**py/releases/tag/v0.0.2
+
+Showing logs for build [32mablazleon-jxpy-master-release-zw2ct-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file **py-0.0.2.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mablazleon-jxpy-master-release-zw2ct-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app **py version 0.0.2 to namespace **-staging
+Created Pull Request: https://github.com/*********/environment-**gke6-staging/pull/2
+Added label updatebot to Pull Request https://github.com/*********/environment-**gke6-staging/pull/2
+got git provider status pending from PR https://github.com/*********/environment-**gke6-staging/pull/2
+got git provider status pending from PR https://github.com/*********/environment-**gke6-staging/pull/2
+got git provider status pending from PR https://github.com/*********/environment-**gke6-staging/pull/2
+got git provider status pending from PR https://github.com/*********/environment-**gke6-staging/pull/2
+got git provider status pending from PR https://github.com/*********/environment-**gke6-staging/pull/2
+got git provider status pending from PR https://github.com/*********/environment-**gke6-staging/pull/2
+Pull Request https://github.com/*********/environment-**gke6-staging/pull/2 is merged at sha d4a65ffdf32522745ddcaaa00aeb77bb98ff9c1a
+Pull Request merged but we are not waiting for the update pipeline to complete!
