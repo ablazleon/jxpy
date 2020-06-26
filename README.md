@@ -229,6 +229,8 @@ What I do is override [the pipeline.yml](https://github.com/jenkins-x-buildpacks
 ![LintingFailed](https://github.com/ablazleon/jxpy/blob/master/LintingFailed.png)
 ![LintingPassed](https://github.com/ablazleon/jxpy/blob/master/LintingPassed.png)
 
+Please open in a new tab to visualize them better: at the left part is the pipeline passing and the right that mathcs thsi behaviour.
+
 From the cli, as for the jx-k8, has not been found any ui.
 
 - [x] ***Build a Docker container in a pipeline*** The project takes a Dockerfile and creates a Docker container in the pipeline.
