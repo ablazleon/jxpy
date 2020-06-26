@@ -1,0 +1,113 @@
+
+Showing logs for build [32mablazleon-jxpy-master-release-rctlf-22[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-5shn5[0m
+{"level":"info","ts":1593187737.107125,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1593187737.1079857,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mablazleon-jxpy-master-release-rctlf-22[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-l2x8r[0m
+{"level":"info","ts":1593187738.1798654,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1593187738.186118,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mablazleon-jxpy-master-release-rctlf-22[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mablazleon-jxpy-master-release-rctlf-22[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-ablazleon-jxpy-master-release-rctlf-wrgh4[0m
+{"level":"info","ts":1593187747.4232187,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1593187748.8752453,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/**py.git @ v0.0.22 in path /workspace/source"}
+
+Showing logs for build [32mablazleon-jxpy-master-release-rctlf-22[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mablazleon-jxpy-master-release-rctlf-22[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:f97530fd4a98b9e3e9799c96cdc6a451d9f0ac09
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mablazleon-jxpy-master-release-rctlf-22[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mablazleon-jxpy-master-release-rctlf-22[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mablazleon-jxpy-master-release-rctlf-22[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0626 16:09:12.880590       9 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest python:onbuild     
+E0626 16:09:13.341075       9 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0626 16:09:13.343937       9 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0002] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0004] Built cross stage deps: map[]                
+[36mINFO[0m[0004] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0005] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0006] Executing 3 build triggers                   
+[36mINFO[0m[0006] Checking for cached layer gcr.io/envjenkinsk8udacitycapstone/cache:dc2a839bd6d525fd9783a6852939774c55dc14024a49397cd18ef840aae363e1... 
+[36mINFO[0m[0007] Using caching version of cmd: COPY requirements.txt /usr/src/app/ 
+[36mINFO[0m[0007] Checking for cached layer gcr.io/envjenkinsk8udacitycapstone/cache:8bf2abf0a84228eb1cc03999f3ee3ce7361230c16e28eae7af74285f6291b7d4... 
+[36mINFO[0m[0007] Using caching version of cmd: RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0007] Checking for cached layer gcr.io/envjenkinsk8udacitycapstone/cache:5f7b48c494f5018eb03cda5cf7f4c9bffcefd2e269843bc17ecc3cae5a282b67... 
+[36mINFO[0m[0008] No cached layer found for cmd COPY . /usr/src/app 
+[36mINFO[0m[0008] cmd: EXPOSE                                  
+[36mINFO[0m[0008] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0008] Unpacking rootfs as cmd COPY . /usr/src/app requires it. 
+[36mINFO[0m[0029] COPY requirements.txt /usr/src/app/          
+[36mINFO[0m[0029] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0029] RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0029] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0030] COPY . /usr/src/app                          
+[36mINFO[0m[0030] Resolving 115 paths                          
+[36mINFO[0m[0030] Taking snapshot of files...                  
+[36mINFO[0m[0030] COPY requirements.txt .                      
+[36mINFO[0m[0030] Pushing layer gcr.io/envjenkinsk8udacitycapstone/cache:5f7b48c494f5018eb03cda5cf7f4c9bffcefd2e269843bc17ecc3cae5a282b67 to cache now 
+[36mINFO[0m[0030] Resolving 1 paths                            
+[36mINFO[0m[0030] Taking snapshot of files...                  
+[36mINFO[0m[0030] Pushing layer gcr.io/envjenkinsk8udacitycapstone/cache:7e7b8aa2c83cef10b721e8116b68ccebb7bf02394b0fb446c55364754e2a792a to cache now 
+[36mINFO[0m[0030] ENV PORT 8080                                
+[36mINFO[0m[0030] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0030] EXPOSE 8080                                  
+[36mINFO[0m[0030] cmd: EXPOSE                                  
+[36mINFO[0m[0030] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0030] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0030] ENTRYPOINT ["python"]                        
+[36mINFO[0m[0030] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0030] CMD ["app.py"]                               
+[36mINFO[0m[0030] No files changed in this command, skipping snapshotting. 
+
+Showing logs for build [32mablazleon-jxpy-master-release-rctlf-22[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mablazleon-jxpy-master-release-rctlf-22[0m stage [32mfrom-build-pack[0m and container [32mstep-build-lint[0m
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/43/84/23ed6a1796480a6f1a2d38f2802901d078266bda38388954d01d3f2e821d/pip-20.1.1-py2.py3-none-any.whl (1.5MB)
+Installing collected packages: pip
+  Found existing installation: pip 9.0.3
+    Uninstalling pip-9.0.3:
+      Successfully uninstalled pip-9.0.3
+Successfully installed pip-20.1.1
+Collecting pylint==2.5.3
+  Downloading pylint-2.5.3-py3-none-any.whl (324 kB)
+Collecting mccabe<0.7,>=0.6
+  Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+Collecting astroid<=2.5,>=2.4.0
+  Downloading astroid-2.4.2-py3-none-any.whl (213 kB)
+Collecting isort<5,>=4.2.5
+  Downloading isort-4.3.21-py2.py3-none-any.whl (42 kB)
+Collecting toml>=0.7.1
+  Downloading toml-0.10.1-py2.py3-none-any.whl (19 kB)
+Collecting six~=1.12
+  Downloading six-1.15.0-py2.py3-none-any.whl (10 kB)
+Collecting typed-ast<1.5,>=1.4.0; implementation_name == "cpython" and python_version < "3.8"
+  Downloading typed_ast-1.4.1-cp36-cp36m-manylinux1_x86_64.whl (737 kB)
+Collecting lazy-object-proxy==1.4.*
+  Downloading lazy_object_proxy-1.4.3-cp36-cp36m-manylinux1_x86_64.whl (55 kB)
+Collecting wrapt~=1.11
+  Downloading wrapt-1.12.1.tar.gz (27 kB)
+Using legacy setup.py install for wrapt, since package 'wheel' is not installed.
+Installing collected packages: mccabe, six, typed-ast, lazy-object-proxy, wrapt, astroid, isort, toml, pylint
+    Running setup.py install for wrapt: started
+    Running setup.py install for wrapt: finished with status 'done'
+Successfully installed astroid-2.4.2 isort-4.3.21 lazy-object-proxy-1.4.3 mccabe-0.6.1 pylint-2.5.3 six-1.15.0 toml-0.10.1 typed-ast-1.4.1 wrapt-1.12.1
+************* Module app
+app.py:14:16: E0001: invalid syntax (<unknown>, line 14) (syntax-error)
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-lint'. The execution of the pipeline has stopped.[0m
