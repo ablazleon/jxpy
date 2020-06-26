@@ -1,1 +1,12 @@
 buildPack: python
+pipelineConfig:
+ pipelines:
+  release:
+   build:
+    steps:
+    - sh: echo "setup"
+      name: setup
+    - sh: echo "install"
+      name: install
+    - sh: echo "lint"
+      name: lint
