@@ -252,6 +252,10 @@ Jenkins X deploy a kuberntes cluster, using cloud formation under the hood. I fi
 As it can be seen in the images of ```jx promote``` after the application is tested that works on the dev environment is promote to production. Then, it can be seen that with   
 ```kubectl get po```, that images updated in a rolling deployment way.
 
+```while true; do curl "http://jxpy-jx-production.34.91.102.68.nip.io/"; date; echo ""; sleep 1; done ```
+
+In any moment there's a 404, and versions alternate between one and another.
+
 
 ```while true; do curl "http://jxpy-jx-production.34.91.102.68.nip.io/"; date; echo ""; sleep 1; done ```
 
@@ -264,6 +268,7 @@ In any moment there's a 404, and versions alternate between one and another.
 
 ### References
 
+
 For doing this project I inspired myself in different sources:
 
 THe udacity documentation, this includes the help of Andres Pinzon.
@@ -273,6 +278,5 @@ https://medium.com/@andresaaap/capstone-cloud-devops-nanodegree-4493ab439d48
 For the progressive deplyoment this post was so useful:
 
 https://itnext.io/jenkins-x-istio-flagger-canary-deployment-9d5e187c2334
-
 
 
