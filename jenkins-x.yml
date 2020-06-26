@@ -4,9 +4,5 @@ pipelineConfig:
   release:
    build:
     steps:
-    - sh: python3 -m venv ~/.devops && source ~/.devops/bin/activate
-      name: setup
-    - sh: pip install --upgrade pip && pip install -r requirements.txt
-      name: install
-    - sh: pylint --disable=R,C,W1203 app.py
+    - sh: python3 -m venv ~/.devops && source ~/.devops/bin/activate && pip install --upgrade pip && pip install -r requirements.txt && pylint --disable=R,C,W1203 app.py
       name: lint
