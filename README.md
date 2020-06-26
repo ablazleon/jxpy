@@ -11,6 +11,8 @@ In this project I have built a CI/CD pipeline for a microservices application fo
 ### b. Roadmap
 ### c. Rubric
 
+### References
+
 
 ---------------
 
@@ -224,6 +226,13 @@ https://gcr.io/envjenkinsk8udacitycapstone/mynodejsjx
 
 What I do is override [the pipeline.yml](https://github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/blob/master/packs/python/pipeline.yaml), with the desire steps in jenkins-x.yml on the repo. 
 
+![LintingFailed](https://github.com/ablazleon/jxpy/blob/master/LintingFailed.png)
+![LintingPassed](https://github.com/ablazleon/jxpy/blob/master/LintingPassed.png)
+
+Please open in a new tab to visualize them better: at the left part is the pipeline passing and the right that mathcs thsi behaviour.
+
+From the cli, as for the jx-k8, has not been found any ui.
+
 - [x] ***Build a Docker container in a pipeline*** The project takes a Dockerfile and creates a Docker container in the pipeline.
 
 In this last inherited pipeline, the docker container is automaticallty created.
@@ -236,10 +245,13 @@ In this last inherited pipeline, the docker container is automaticallty created.
 
 Jenkins X deploy a kuberntes cluster, using cloud formation under the hood. I fisrt deploy  it on eks, but then switched to gke, as I ran teh eks cluster a couple days and it costs me 17$, when I have 100$ first credits in gke.
 
+![GKE dashboard](https://github.com/ablazleon/jxpy/blob/master/RollingDeploymentInGKE.png)
+
 - [x] ***Use Blue/Green Deployment or a Rolling Deployment successfully*** The project performs the correct steps to do a blue/green or a rolling deployment into the environment selected. Student demonstrates the successful completion of chosen deployment methodology with screenshots.
 
 As it can be seen in the images of ```jx promote``` after the application is tested that works on the dev environment is promote to production. Then, it can be seen that with   
-```kubectl get po```, that images updated in a rolling fashion
+```kubectl get po```, that images updated in a rolling deployment way.
+
 
 ```while true; do curl "http://jxpy-jx-production.34.91.102.68.nip.io/"; date; echo ""; sleep 1; done ```
 
@@ -248,8 +260,19 @@ In any moment there's a 404, and versions alternate between one and another.
 
 #### Bonus
 
-- [ ] Perform additional CI steps in the pipeline outside of just linting: ***as i have integrated jenkins X is easier to include additional CI steps than with the initial Jenkins that I setup, beacuse of the jenkins X buils packs***
+- [x] Perform additional CI steps in the pipeline outside of just linting: ***as i have integrated jenkins X is easier to include additional CI steps than with the initial Jenkins that I setup, beacuse of the jenkins X buils packs***
 
 ### References
+
+For doing this project I inspired myself in different sources:
+
+THe udacity documentation, this includes the help of Andres Pinzon.
+
+https://medium.com/@andresaaap/capstone-cloud-devops-nanodegree-4493ab439d48
+
+For the progressive deplyoment this post was so useful:
+
+https://itnext.io/jenkins-x-istio-flagger-canary-deployment-9d5e187c2334
+
 
 
