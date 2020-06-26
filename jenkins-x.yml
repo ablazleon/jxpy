@@ -4,7 +4,7 @@ pipelineConfig:
   release:
    build:
     steps:
-    - sh: echo "setup"
+    - sh: python3 -m venv ~/.devops &&\ source ~/.devops/bin/activate
       name: setup
     - sh: echo "install"
       name: install
