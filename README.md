@@ -250,7 +250,7 @@ Jenkins X deploy a kuberntes cluster, using cloud formation under the hood. I fi
 - [x] ***Use Blue/Green Deployment or a Rolling Deployment successfully*** The project performs the correct steps to do a blue/green or a rolling deployment into the environment selected. Student demonstrates the successful completion of chosen deployment methodology with screenshots.
 
 As it can be seen in the images of ```jx promote``` after the application is tested that works on the dev environment is promote to production. Then, it can be seen that with   
-```kubectl get po```, that images updated in a rolling fashion
+```kubectl get po```, that images updated in a rolling deployment way.
 
 
 
