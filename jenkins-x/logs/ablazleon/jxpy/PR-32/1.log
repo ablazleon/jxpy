@@ -1,0 +1,36 @@
+
+Showing logs for build [32mmeta-ablazleon-jxpy-pr-32-pr-bu-ptkqr-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-b8gc4[0m
+{"level":"info","ts":1593202872.9170086,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1593202872.9175184,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-ablazleon-jxpy-pr-32-pr-bu-ptkqr-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-g5qbj[0m
+{"level":"info","ts":1593202874.287318,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1593202874.2897563,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mmeta-ablazleon-jxpy-pr-32-pr-bu-ptkqr-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmeta-ablazleon-jxpy-pr-32-pr-bu-ptkqr-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-ablazleon-jxpy-pr-32-pr-bu-ptkqr-5sjlh[0m
+{"level":"info","ts":1593202880.4538462,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1593202882.9182296,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/**py.git @ f12991651140fd6c28e6cfe4a03cef6fb1c27999 in path /workspace/source"}
+
+Showing logs for build [32mmeta-ablazleon-jxpy-pr-32-pr-bu-ptkqr-1[0m stage [32mmeta-pipeline[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mmeta-ablazleon-jxpy-pr-32-pr-bu-ptkqr-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:f12991651140fd6c28e6cfe4a03cef6fb1c27999,32:2a4f125f9870fc9e545d7a19bf28622c84397630
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 2a4f125f9870fc9e545d7a19bf28622c84397630: f12991651140fd6c28e6cfe4a03cef6fb1c27999:
+DEBUG: ran git fetch --unshallow origin 2a4f125f9870fc9e545d7a19bf28622c84397630: f12991651140fd6c28e6cfe4a03cef6fb1c27999: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard f12991651140fd6c28e6cfe4a03cef6fb1c27999
+DEBUG: ran git reset --hard f12991651140fd6c28e6cfe4a03cef6fb1c27999 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 2a4f125f9870fc9e545d7a19bf28622c84397630
+error: error during merge: merging 2a4f125f9870fc9e545d7a19bf28622c84397630 into master: git output: Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.: failed to run 'git merge 2a4f125f9870fc9e545d7a19bf28622c84397630' command in directory '', output: 'Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.'
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-git-merge'. The execution of the pipeline has stopped.[0m
