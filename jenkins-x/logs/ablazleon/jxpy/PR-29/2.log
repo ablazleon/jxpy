@@ -1,0 +1,129 @@
+
+Showing logs for build [32mablazleon-jxpy-pr-29-pr-build-24krq-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-ztbmh[0m
+{"level":"info","ts":1593209055.5527031,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1593209055.5532472,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mablazleon-jxpy-pr-29-pr-build-24krq-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-8g274[0m
+{"level":"info","ts":1593209057.1129837,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1593209057.1143594,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mablazleon-jxpy-pr-29-pr-build-24krq-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mablazleon-jxpy-pr-29-pr-build-24krq-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-ablazleon-jxpy-pr-29-pr-build-24krq-kjrc8[0m
+{"level":"info","ts":1593209064.103618,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1593209066.0996954,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/**py.git @ master in path /workspace/source"}
+
+Showing logs for build [32mablazleon-jxpy-pr-29-pr-build-24krq-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mablazleon-jxpy-pr-29-pr-build-24krq-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:9218f91c681222ef3b852ca60453446aae919f55,29:66a07b2c8716a172e1475bca5dfbd53c771ca852
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 66a07b2c8716a172e1475bca5dfbd53c771ca852: 9218f91c681222ef3b852ca60453446aae919f55:
+DEBUG: ran git fetch --unshallow origin 66a07b2c8716a172e1475bca5dfbd53c771ca852: 9218f91c681222ef3b852ca60453446aae919f55: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 9218f91c681222ef3b852ca60453446aae919f55
+DEBUG: ran git reset --hard 9218f91c681222ef3b852ca60453446aae919f55 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 66a07b2c8716a172e1475bca5dfbd53c771ca852
+DEBUG: ran git merge 66a07b2c8716a172e1475bca5dfbd53c771ca852 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 9218f91c681222ef3b852ca60453446aae919f55..HEAD
+Merged SHA 66a07b2c8716a172e1475bca5dfbd53c771ca852 with commit message 'Merge branch 'master' into *********-patch-28' into base branch master
+Merged SHA 1297979400e1bc4094c92659ef475bd72ce2422d with commit message 'Update README.md' into base branch master
+
+Showing logs for build [32mablazleon-jxpy-pr-29-pr-build-24krq-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mablazleon-jxpy-pr-29-pr-build-24krq-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0626 22:04:33.492677      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0002] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0002] Retrieving image manifest python:onbuild     
+E0626 22:04:34.230731      10 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0626 22:04:34.233314      10 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0003] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0005] Built cross stage deps: map[]                
+[36mINFO[0m[0005] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0006] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0007] Executing 3 build triggers                   
+[36mINFO[0m[0007] Checking for cached layer gcr.io/envjenkinsk8udacitycapstone/cache:dc2a839bd6d525fd9783a6852939774c55dc14024a49397cd18ef840aae363e1... 
+[36mINFO[0m[0008] Using caching version of cmd: COPY requirements.txt /usr/src/app/ 
+[36mINFO[0m[0008] Checking for cached layer gcr.io/envjenkinsk8udacitycapstone/cache:8bf2abf0a84228eb1cc03999f3ee3ce7361230c16e28eae7af74285f6291b7d4... 
+[36mINFO[0m[0009] Using caching version of cmd: RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0009] Checking for cached layer gcr.io/envjenkinsk8udacitycapstone/cache:557079dd1fd91b809fdf86fa840c4dd780b58e7a6a277f86b359bf33e05ab403... 
+[36mINFO[0m[0009] No cached layer found for cmd COPY . /usr/src/app 
+[36mINFO[0m[0009] cmd: EXPOSE                                  
+[36mINFO[0m[0009] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0009] Unpacking rootfs as cmd COPY . /usr/src/app requires it. 
+[36mINFO[0m[0035] COPY requirements.txt /usr/src/app/          
+[36mINFO[0m[0035] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0035] RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0035] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0035] COPY . /usr/src/app                          
+[36mINFO[0m[0035] Resolving 131 paths                          
+[36mINFO[0m[0035] Taking snapshot of files...                  
+[36mINFO[0m[0036] Pushing layer gcr.io/envjenkinsk8udacitycapstone/cache:557079dd1fd91b809fdf86fa840c4dd780b58e7a6a277f86b359bf33e05ab403 to cache now 
+[36mINFO[0m[0036] COPY requirements.txt .                      
+[36mINFO[0m[0036] Resolving 1 paths                            
+[36mINFO[0m[0036] Taking snapshot of files...                  
+[36mINFO[0m[0036] ENV PORT 8080                                
+[36mINFO[0m[0036] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0036] EXPOSE 8080                                  
+[36mINFO[0m[0036] cmd: EXPOSE                                  
+[36mINFO[0m[0036] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0036] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0036] ENTRYPOINT ["python"]                        
+[36mINFO[0m[0036] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0036] CMD ["app.py"]                               
+[36mINFO[0m[0036] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0036] Pushing layer gcr.io/envjenkinsk8udacitycapstone/cache:9273cb058371fb02684d9fce8a5f0d522ec30aa6ce24b7c76ae73005e9b751fc to cache now 
+
+Showing logs for build [32mablazleon-jxpy-pr-29-pr-build-24krq-2[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mablazleon-jxpy-pr-29-pr-build-24krq-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-29-2/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-29-2/" ../*/Chart.yaml
+sed -i -e "s|repository:.*|repository: gcr.io\/envjenkinsk8udacitycapstone\/**py|" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-29-2/" values.yaml
+echo "  version: 0.0.0-SNAPSHOT-PR-29-2" >> requirements.yaml
+** step helm build
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+
+Showing logs for build [32mablazleon-jxpy-pr-29-pr-build-24krq-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-preview[0m
+Creating a preview
+Found commit author match for: ********* with email address: adrian.blazquez.leon@alumnos.upm.es
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  config:
+    domain: 34.91.102.68.nip.io
+    exposer: Ingress
+    http: "true"
+preview:
+  image:
+    repository: gcr.io/envjenkinsk8udacitycapstone/**py
+    tag: 0.0.0-SNAPSHOT-PR-29-2
+
+configmap "exposecontroller" deleted
+serviceaccount "cleanup" deleted
+serviceaccount "expose" deleted
+role.rbac.authorization.k8s.io "cleanup" deleted
+role.rbac.authorization.k8s.io "expose" deleted
+rolebinding.rbac.authorization.k8s.io "cleanup" deleted
+rolebinding.rbac.authorization.k8s.io "expose" deleted
+Updating PipelineActivities *********-**py-pr-29-2 which has status Running
+Preview application is now available at: http://**py.**-*********-**py-pr-29.34.91.102.68.nip.io
