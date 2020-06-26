@@ -1,0 +1,93 @@
+
+Showing logs for build [32mablazleon-jxpy-master-release-9wc8h-15[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-rtmg9[0m
+{"level":"info","ts":1593186114.9899712,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1593186114.990537,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mablazleon-jxpy-master-release-9wc8h-15[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-rq4h7[0m
+{"level":"info","ts":1593186115.479963,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1593186115.48137,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mablazleon-jxpy-master-release-9wc8h-15[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mablazleon-jxpy-master-release-9wc8h-15[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-ablazleon-jxpy-master-release-9wc8h-fmhkf[0m
+{"level":"info","ts":1593186126.75086,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1593186128.14434,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/**py.git @ v0.0.15 in path /workspace/source"}
+
+Showing logs for build [32mablazleon-jxpy-master-release-9wc8h-15[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mablazleon-jxpy-master-release-9wc8h-15[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:e1d0553598b2b3c7177f1a02479d6c07d422ce44
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mablazleon-jxpy-master-release-9wc8h-15[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mablazleon-jxpy-master-release-9wc8h-15[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mablazleon-jxpy-master-release-9wc8h-15[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0626 15:42:12.077685       9 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest python:onbuild     
+E0626 15:42:12.590806       9 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0626 15:42:12.594015       9 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0002] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0003] Built cross stage deps: map[]                
+[36mINFO[0m[0003] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0004] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0005] Executing 3 build triggers                   
+[36mINFO[0m[0005] Checking for cached layer gcr.io/envjenkinsk8udacitycapstone/cache:dc2a839bd6d525fd9783a6852939774c55dc14024a49397cd18ef840aae363e1... 
+[36mINFO[0m[0006] Using caching version of cmd: COPY requirements.txt /usr/src/app/ 
+[36mINFO[0m[0006] Checking for cached layer gcr.io/envjenkinsk8udacitycapstone/cache:8bf2abf0a84228eb1cc03999f3ee3ce7361230c16e28eae7af74285f6291b7d4... 
+[36mINFO[0m[0006] Using caching version of cmd: RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0007] Checking for cached layer gcr.io/envjenkinsk8udacitycapstone/cache:092b1b8d59346701b42e99ad685e0993d4342654ab5c9b5c89fdca86983359c2... 
+[36mINFO[0m[0007] No cached layer found for cmd COPY . /usr/src/app 
+[36mINFO[0m[0007] cmd: EXPOSE                                  
+[36mINFO[0m[0007] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0007] Unpacking rootfs as cmd COPY . /usr/src/app requires it. 
+[36mINFO[0m[0025] COPY requirements.txt /usr/src/app/          
+[36mINFO[0m[0025] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0025] RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0025] Found cached layer, extracting to filesystem 
+[36mINFO[0m[0026] COPY . /usr/src/app                          
+[36mINFO[0m[0026] Resolving 116 paths                          
+[36mINFO[0m[0026] Taking snapshot of files...                  
+[36mINFO[0m[0026] Pushing layer gcr.io/envjenkinsk8udacitycapstone/cache:092b1b8d59346701b42e99ad685e0993d4342654ab5c9b5c89fdca86983359c2 to cache now 
+[36mINFO[0m[0026] COPY requirements.txt .                      
+[36mINFO[0m[0026] Resolving 1 paths                            
+[36mINFO[0m[0026] Taking snapshot of files...                  
+[36mINFO[0m[0026] Pushing layer gcr.io/envjenkinsk8udacitycapstone/cache:522cd46ce58d40e20a75f90ddcb44b42d8dd50bc0f4a60cf60a82ca3df9db79e to cache now 
+[36mINFO[0m[0026] ENV PORT 8080                                
+[36mINFO[0m[0026] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0026] EXPOSE 8080                                  
+[36mINFO[0m[0026] cmd: EXPOSE                                  
+[36mINFO[0m[0026] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0026] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0026] ENTRYPOINT ["python"]                        
+[36mINFO[0m[0026] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0026] CMD ["app.py"]                               
+[36mINFO[0m[0026] No files changed in this command, skipping snapshotting. 
+
+Showing logs for build [32mablazleon-jxpy-master-release-9wc8h-15[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mablazleon-jxpy-master-release-9wc8h-15[0m stage [32mfrom-build-pack[0m and container [32mstep-build-isntall[0m
+
+Showing logs for build [32mablazleon-jxpy-master-release-9wc8h-15[0m stage [32mfrom-build-pack[0m and container [32mstep-build-install[0m
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/43/84/23ed6a1796480a6f1a2d38f2802901d078266bda38388954d01d3f2e821d/pip-20.1.1-py2.py3-none-any.whl (1.5MB)
+Installing collected packages: pip
+  Found existing installation: pip 8.1.2
+    Uninstalling pip-8.1.2:
+      Successfully uninstalled pip-8.1.2
+Successfully installed pip-20.1.1
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip, can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support
+ERROR: Could not find a version that satisfies the requirement pylint==2.5.3 (from -r requirements.txt (line 1)) (from versions: 0.15.2, 0.16.0, 0.18.0, 0.18.1, 0.19.0, 0.20.0, 0.21.0, 0.21.1, 0.21.2, 0.21.3, 0.22.0, 0.23.0, 0.24.0, 0.25.0, 0.25.1, 0.25.2, 0.26.0, 0.27.0, 0.28.0, 1.0.0, 1.1.0, 1.2.0, 1.2.1, 1.3.0, 1.3.1, 1.4.0, 1.4.1, 1.4.2, 1.4.3, 1.4.4, 1.4.5, 1.5.0, 1.5.1, 1.5.2, 1.5.3, 1.5.4, 1.5.5, 1.5.6, 1.6.0, 1.6.1, 1.6.2, 1.6.3, 1.6.4, 1.6.5, 1.7.0, 1.7.1, 1.7.2, 1.7.3, 1.7.4, 1.7.5, 1.7.6, 1.8.0, 1.8.1, 1.8.2, 1.8.3, 1.8.4, 1.9.0, 1.9.1, 1.9.2, 1.9.3, 1.9.4, 1.9.5)
+ERROR: No matching distribution found for pylint==2.5.3 (from -r requirements.txt (line 1))
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-install'. The execution of the pipeline has stopped.[0m
